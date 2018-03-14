@@ -1,0 +1,95 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+}
+.card {
+  box-sizing: border-box;
+  padding: 1.5rem;
+  border: 1px solid hsl(200, 10%, 80%);
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: left;
+  color: hsl(200, 10%, 20%);
+  box-shadow: 0 1px 2px hsla(200, 10%, 20%, 0.5);
+}
+.card--no-shadow {
+  box-shadow: none;
+  border: 1px solid hsl(200, 10%, 80%);
+}
+.card--wrong-shadow {
+  box-shadow: 0 0 3px hsla(200, 10%, 20%, 0.4);
+}
+.card * {
+  margin: 0;
+  font-size: 16px;
+}
+.card > * + * {
+  margin-top: 16px;
+}
+.card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.card__img {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+}
+.card__title {
+  margin-left: 16px;
+  font-size: 28px;
+}
+.card__subtitle {
+  margin-left: 16px;
+  font-size: 14px;
+}
+.card__subtitle.fixed {
+  font-size: 16px;
+  color: hsl(200, 10%, 50%);
+}
+.card__title.fixed {
+  font-size: 20px;
+  font-weight: bold;
+}
+.card__btn {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 1px solid;
+  border-radius: 16px;
+  color: hsl(200, 90%, 60%);
+}
+.card__bio {
+  font-size: 18px;
+}
+.card__bio.fixed {
+  font-size: 16px;
+}
+.card__list {
+  padding-left: 16px;
+  list-style-type: circle;
+}
+.card__list.fixed {
+  color: hsl(200, 10%, 40%);
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border: none;
+  padding: 12px 24px;
+  width: calc(100% + 3rem);
+  left: -1.5rem;
+  right: -1.5rem;
+  bottom: -1.5rem;
+  border-top: 1px solid hsl(200, 10%, 80%);
+  border-radius: 0 0 4px 4px;
+}
+.card__footer.fixed {
+  border-top: none;
+  background-color: hsl(200, 20%, 95%);
+}
