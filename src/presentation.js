@@ -1,5 +1,5 @@
 // Import React
-import React from "react";
+import React from 'react';
 
 // Import Spectacle Core tags
 import {
@@ -9,17 +9,18 @@ import {
   Heading,
   ListItem,
   List,
+  Link,
   Layout,
   Fill,
   Quote,
   Slide,
   Text as SText,
   Code,
-  CodePane
-} from "spectacle";
+  CodePane,
+} from 'spectacle';
 
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
+import createTheme from 'spectacle/lib/themes/default';
 
 import {
   Palette,
@@ -29,47 +30,47 @@ import {
   CardFooter,
   CardShadow,
   CardOffset,
-  Buttons
-} from "./examples";
+  Buttons,
+} from './examples';
 
 // Require CSS
-require("normalize.css");
+require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: "hsl(225, 35%, 25%)",
-    secondary: "hsl(200, 10%, 25%)",
-    tertiary: "hsl(200, 50%, 60%)",
-    quartenary: "hsl(35, 100%, 60%)"
+    primary: 'hsl(225, 35%, 25%)',
+    secondary: 'hsl(200, 10%, 25%)',
+    tertiary: 'hsl(200, 50%, 60%)',
+    quartenary: 'hsl(35, 100%, 60%)',
   },
   {
-    primary: "-apple-system, BlinkMacSystemFont, Helvetica, sans-serif",
-    secondary: "Georgia, serif"
+    primary: '-apple-system, BlinkMacSystemFont, Helvetica, sans-serif',
+    secondary: 'Georgia, serif',
   }
 );
 
-const Title = ({ color = "quartenary", size = 4, children }) => (
+const Title = ({ color = 'quartenary', size = 4, children }) => (
   <Heading size={size} textColor={color} margin="0 0 2rem 0">
     {children}
   </Heading>
 );
 
-const Text = ({ color = "#fff", margin = "0 0 2rem 0", children }) => (
+const Text = ({ color = '#fff', margin = '0 0 2rem 0', children }) => (
   <SText textColor={color} margin={margin}>
     {children}
   </SText>
 );
 
-const Img = ({ src, size = "700" }) => <img src={src} width={size} alt="" />;
+const Img = ({ src, size = '700' }) => <img src={src} width={size} alt="" />;
 
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        transition={["fade"]}
+        transition={['fade']}
         transitionDuration={500}
         theme={theme}
-        progress={"bar"}
+        progress={'bar'}
         textAlign="left"
       >
         <Slide>
@@ -94,7 +95,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Title textColor="quartenary">I'm Oli and I like CSS</Title>
-          <Text textColor="tertiary">FAC10 & Ticketmaster</Text>
+          <Text textColor="tertiary">FAC10 🎓 & Ticketmaster 🎟</Text>
+          <Text margin="0">
+            <Link textColor="tertiary" href="https://twitter.com/_oliverjam">
+              twitter.com/_oliverjam
+            </Link>
+          </Text>
+          <Text>
+            <Link textColor="tertiary" href="https://github.com/oliverjam">
+              github.com/oliverjam
+            </Link>
+          </Text>
         </Slide>
         <Slide>
           <Title textColor="quartenary">The plan</Title>
@@ -267,7 +278,7 @@ export default class Presentation extends React.Component {
           </Title>
           <Code>hsl(200, 10%, 25%)</Code>
           <Text color="hsl(200, 10%, 20%)" margin="4rem 0 2rem 0">
-            (off-white backgrounds can be nice too){" "}
+            (off-white backgrounds can be nice too){' '}
           </Text>
           <Code>hsl(200, 10%, 98%)</Code>
         </Slide>
@@ -281,7 +292,7 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary" notes="Readability">
           <Title>Line-length</Title>
           <Text>
-            Keep your line-length between 60 and 80 characters. The{" "}
+            Keep your line-length between 60 and 80 characters. The{' '}
             <Code textColor="#fff">ch</Code> unit can help
           </Text>
         </Slide>
